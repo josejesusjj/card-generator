@@ -3,18 +3,34 @@ body {
   background-color: green;
 }
 .card {
+  position: relative;
   width: 200px;
   height: 300px;
   background-color: white;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
-  position: relative;
   border-radius: 20px;
 }
 .top-suit {
+  font-size: 4rem;
+  text-align: left;
+  position: absolute;
+  top: -10px;
+  left: 10px;
 }
 
 .number {
+  text-align: center;
+  font-size: 6rem;
+  top: 65px;
+  right: 75px;
+  position: absolute;
 }
 .bottom-suit {
+  font-size: 4rem;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
