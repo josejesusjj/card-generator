@@ -12,6 +12,7 @@ body {
   margin-top: 10%;
   border-radius: 20px;
 }
+
 .top-suit {
   font-size: 4rem;
   text-align: left;
@@ -33,4 +34,10 @@ body {
   position: absolute;
   bottom: 0;
   right: 10px;
+}
+
+.button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
