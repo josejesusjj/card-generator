@@ -36,5 +36,7 @@ window.onload = () => {
 let Suitgenerator = () => {
   let Suit = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
   let suitIndex = Math.floor(Math.random() * Suit.length);
+  let red = document.querySelector(".suitcard");
+  red.style.color = "red";
   return Suit[suitIndex];
 };
