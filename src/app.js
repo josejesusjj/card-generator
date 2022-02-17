@@ -27,3 +27,14 @@ let Numbergenerator = () => {
   let numberIndex = Math.floor(Math.random() * Number.length);
   return Number[numberIndex];
 };
+window.onload = () => {
+  document.querySelector("#btn").addEventListener("click", () => {
+    document.querySelector(".suitcard").innerHTML = Suitgenerator();
+  });
+  console.log("I am generating the suit");
+};
+let Suitgenerator = () => {
+  let Suit = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
+  let suitIndex = Math.floor(Math.random() * Suit.length);
+  return Suit[suitIndex];
+};
