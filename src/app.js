@@ -2,12 +2,14 @@
 import "bootstrap";
 import "./style.css";
 //I generate the Event
+
 window.onload = () => {
+  document.querySelector(".card").innerHTML = Suitgenerator();
   document.querySelector("#btn").addEventListener("click", () => {
     document.querySelector(".card").innerHTML = Suitgenerator();
   });
-  console.log("I am generating the suit");
 };
+
 let Suitgenerator = () => {
   let SuitArray = ["'>&spades;", "'>&clubs;", "red'>&hearts;", "red'>&diams;"];
   let suitIndex = Math.floor(Math.random() * SuitArray.length);
@@ -28,7 +30,6 @@ let Suitgenerator = () => {
   ];
   let numberIndex = Math.floor(Math.random() * NumberArray.length);
 
-  //red.style.color = "red";
   //a partir de aqui hago el proceso usando lets
   let suitSymbol = SuitArray[suitIndex];
   let numberSymbol = NumberArray[numberIndex];

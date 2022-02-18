@@ -25,8 +25,8 @@ body {
   text-align: center;
   font-size: 5rem;
   top: 90px;
-  right: 80px;
-  position: absolute;
+  right: auto;
+  position: relative;
 }
 .bottomsuit {
   font-size: 4rem;
