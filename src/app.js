@@ -29,7 +29,7 @@ let Numbergenerator = () => {
 };
 window.onload = () => {
   document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector(".suitcard").innerHTML = Suitgenerator();
+    document.querySelector(".card").innerHTML = Suitgenerator();
   });
   console.log("I am generating the suit");
 };
@@ -38,5 +38,10 @@ let Suitgenerator = () => {
   let suitIndex = Math.floor(Math.random() * Suit.length);
   let red = document.querySelector(".suitcard");
   red.style.color = "red";
-  return Suit[suitIndex];
+  //a partir de aqui hago el proceso usando lets
+
+  let prueba = "<span id='' class='suitcard topsuit'>&spades;</span>";
+  let suitSymbol = Suit[suitIndex];
+  let actualCard = prueba + suitSymbol;
+  return actualCard;
 };
