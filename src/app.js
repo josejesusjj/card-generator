@@ -1,15 +1,19 @@
 /* eslint-disable */
 import "bootstrap";
 import "./style.css";
+//I generate the Event
 
 window.onload = () => {
+  document.querySelector(".card").innerHTML = Suitgenerator();
   document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector("#numbercard").innerHTML = Numbergenerator();
+    document.querySelector(".card").innerHTML = Suitgenerator();
   });
-  console.log("Hello Rigo from the console! ");
 };
-let Numbergenerator = () => {
-  let Number = [
+
+let Suitgenerator = () => {
+  let SuitArray = ["'>&spades;", "'>&clubs;", "red'>&hearts;", "red'>&diams;"];
+  let suitIndex = Math.floor(Math.random() * SuitArray.length);
+  let NumberArray = [
     "A",
     "2",
     "3",
@@ -24,19 +28,15 @@ let Numbergenerator = () => {
     "Q",
     "K"
   ];
-  let numberIndex = Math.floor(Math.random() * Number.length);
-  return Number[numberIndex];
-};
-window.onload = () => {
-  document.querySelector("#btn").addEventListener("click", () => {
-    document.querySelector(".suitcard").innerHTML = Suitgenerator();
-  });
-  console.log("I am generating the suit");
-};
-let Suitgenerator = () => {
-  let Suit = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
-  let suitIndex = Math.floor(Math.random() * Suit.length);
-  let red = document.querySelector(".suitcard");
-  red.style.color = "red";
-  return Suit[suitIndex];
+  let numberIndex = Math.floor(Math.random() * NumberArray.length);
+
+  //From here I make de logic process using lets
+  let suitSymbol = SuitArray[suitIndex];
+  let numberSymbol = NumberArray[numberIndex];
+  let suitup = "<span class='topsuit " + suitSymbol + "</span>";
+  let number = "<h1 id='numbercard' class='number'>" + numberSymbol + "</h1>";
+  let suitdown = "<span class='bottomsuit " + suitSymbol + "</span>";
+
+  let actualCard = suitup + number + suitdown;
+  return actualCard;
 };
