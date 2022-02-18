@@ -23,9 +23,9 @@ body {
 
 .number {
   text-align: center;
-  font-size: 3rem;
-  top: 65px;
-  right: 75px;
+  font-size: 5rem;
+  top: 90px;
+  right: 80px;
   position: absolute;
 }
 .bottomsuit {
@@ -40,4 +40,8 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+}
+
+.red {
+  color: red;
 }
