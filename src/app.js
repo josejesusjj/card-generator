@@ -30,7 +30,7 @@ let Suitgenerator = () => {
   ];
   let numberIndex = Math.floor(Math.random() * NumberArray.length);
 
-  //a partir de aqui hago el proceso usando lets
+  //From here I make de logic process using lets
   let suitSymbol = SuitArray[suitIndex];
   let numberSymbol = NumberArray[numberIndex];
   let suitup = "<span class='topsuit " + suitSymbol + "</span>";
